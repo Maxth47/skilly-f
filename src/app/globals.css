@@ -1,22 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --muted: #737373;
-  --muted-foreground: #a3a3a3;
-  --border: #e5e5e5;
-  --accent: #0a0a0a;
+  --bg: 10 10 10;
+  --bg-card: 13 13 13;
+  --text: 252 252 250;
+  --text-muted: 153 153 153;
+  --border: 255 255 255 / 0.1;
+  --accent: 98 20 217;
+  --accent-green: 26 255 117;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  --font-sans: "Satoshi", "Satoshi Placeholder", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+/* Section label pill (reference style) */
+.section-pill {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(13, 13, 13, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+}
+
+/* Green status dot */
+.green-dot {
+  background-color: rgb(var(--accent-green));
+  box-shadow: 0 0 10px rgba(25, 255, 117, 0.8);
 }
