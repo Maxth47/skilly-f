@@ -1,6 +1,25 @@
 # Site review: Limitless (example.html → Next.js app)
 
-Review compared the reference `example.html` (limitless.framer.photos) with the Next.js app and applied corrections so the app matches the reference.
+Review compared the reference `example.html` (limitless.framer.photos) with the Next.js app and applied corrections so the app matches the reference. A second pass reviewed **section by section** to clone the reference exactly.
+
+---
+
+## Section-by-section clone (latest)
+
+| Section | Reference detail | App implementation |
+|--------|------------------|--------------------|
+| **Header** | Nav: About, Blog, Features→#benefits, Pricing→#pricing, Pages→#pricing; then Tutorials (outline pill), Book a call (purple pill → cal.com) | Same order; Features→#benefits; Tutorials + Book a call as pills; Book a call → cal.com |
+| **Hero** | Video Abstract+Objects.mp4, 48px radius; badge “Hurry, only 3 spots left.”; headline “The truly Limitless design subscription.”; “See plans” → #pricing; “Book a call” → cal.com | Video src = Abstract+Objects.mp4; poster = local hero image; same copy and links |
+| **Logos** | “Our designs are featured on:”; mask gradient 0→25→75→100%; gap 64px | Same label and mask; gap-16 (64px) |
+| **Testimonial** | 5 stars; Tony quote; Tony Saoprano, CEO of Tryal; image mask to right 80% | Same; image from `testimonialTonyCard` |
+| **Process** | “Your designs, effortlessly.”; 3 steps; “Book a 15-min call” → cal.com | Same; step links → cal.com |
+| **Benefits** | “Fast, quality & limitless.” (serif italic); Jenny testimonial; 3 benefit cards | Same |
+| **Features** | “Reasons you will love us.”; 6 cards; CTA “Book a 15-min call” → cal.com | Same; CTA → cal.com |
+| **Solution** | “All your design needs.”; categories with rounded-2xl, border-top only, gap 24px; id solution | Same; pills rounded-2xl border-t; gap-6; id="solution" |
+| **Pricing** | “3 spots left”; $2,989/month; Subscribe → stripe.com; Book a call → cal.com; Framer +$500; feature list | Subscribe → stripe.com; Book a call → cal.com; same copy |
+| **FAQ** | Accordion; 18px questions | Same structure |
+| **Tutorials** | “Limitless” styled + “ Tutorials”; “Buy template” → hxmzaehsan.com/templates/limitless; “See tutorials” | Same; Buy template external link |
+| **Footer** | 5 links only: About, Blog, Features→#features, Pricing→#pricing, Legal→/legal; Created by Hamza Ehsan→x.com; Use for free→framer.link+utm | Same 5 links; Features→#features; Hamza→x.com; Use for free with utm_source=framer |
 
 ---
 

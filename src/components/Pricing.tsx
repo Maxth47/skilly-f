@@ -36,14 +36,18 @@ export function Pricing() {
             <p className="mt-2 text-[rgb(var(--text-muted))]">One request at a time. Pause or cancel anytime.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="#subscribe"
-                className="flex flex-1 items-center justify-center rounded-full bg-[rgb(var(--accent))] py-4 text-base font-medium text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
+                href="https://stripe.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 items-center justify-center rounded-full bg-[rgb(var(--accent))] py-4 text-lg font-medium tracking-[-0.02em] text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
               >
                 Subscribe
               </Link>
               <Link
-                href="#book"
-                className="flex flex-1 items-center justify-center rounded-full border border-white/10 bg-[rgba(13,13,13,0.5)] py-4 text-base font-medium text-[rgb(var(--text))] transition-opacity hover:opacity-90"
+                href="https://cal.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 items-center justify-center rounded-full border border-white/10 bg-[rgba(13,13,13,0.5)] py-4 text-lg font-medium tracking-[-0.02em] text-[rgb(var(--text))] transition-opacity hover:opacity-90"
               >
                 Book a call
               </Link>

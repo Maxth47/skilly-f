@@ -12,7 +12,7 @@ const categories = [
 
 export function Solution() {
   return (
-    <section className="py-20 md:py-28">
+    <section id="solution" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
           <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]">Solution</p>
@@ -25,10 +25,10 @@ export function Solution() {
           needs, so you don&apos;t have to go anywhere else.
         </p>
 
-        <ul className="mt-14 flex flex-wrap justify-center gap-3">
+        <ul className="mt-14 flex flex-wrap justify-center gap-6">
           {categories.map((cat) => (
             <li key={cat}>
-              <span className="inline-block rounded-full border border-white/10 bg-[rgb(var(--bg-card))] px-5 py-2.5 text-sm font-medium text-[rgb(var(--text))]">
+              <span className="inline-block rounded-2xl border-t border-white/10 bg-[rgb(var(--bg-card))] px-6 py-3 text-sm font-medium text-[rgb(var(--text))]">
                 # {cat}
               </span>
             </li>

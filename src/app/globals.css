@@ -42,3 +42,33 @@ body {
   background-color: rgb(var(--accent-green));
   box-shadow: 0 0 10px rgba(25, 255, 117, 0.8);
 }
+
+/* Logos marquee (infinite horizontal scroll) */
+@keyframes logos-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logos-marquee {
+  animation: logos-marquee 35s linear infinite;
+  will-change: transform;
+}
+
+/* Work section: 3 horizontal marquee tracks */
+@keyframes work-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-work-marquee {
+  animation: work-marquee 60s linear infinite;
+  will-change: transform;
+}

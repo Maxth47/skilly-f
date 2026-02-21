@@ -1,6 +1,14 @@
 import Image from "next/image";
 import { images } from "@/lib/images";
 
+function Star() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-5 w-5 shrink-0 fill-white">
+      <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z" />
+    </svg>
+  );
+}
+
 const benefits = [
   {
     title: "Submit Unlimited Requests",
@@ -21,62 +29,98 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="benefits" className="py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section aria-label="Benefits" className="py-20 md:py-28">
+      <div
+        id="benefits"
+        className="mx-auto max-w-7xl px-6 lg:px-8"
+        data-border="true"
+      >
+        {/* Text / Header */}
         <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
-          <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]">Benefits</p>
-        </div>
-        <h2 className="mx-auto max-w-2xl text-center text-4xl font-medium tracking-[-0.05em] text-[rgb(var(--text))] sm:text-5xl md:text-6xl">
-          Fast, quality <span className="font-serif italic">& limitless.</span>
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-[rgb(var(--text-muted))]">
-          Limitless replaces unreliable freelancers and expensive agencies for one flat monthly fee, with
-          highly-converting designs delivered so fast that it will blow your mind.
-        </p>
-
-        <div className="mx-auto mt-16 max-w-2xl">
-          <p className="text-center text-lg font-medium text-[rgb(var(--text))]">
-            Getting design done was such a pain. I am so glad we found Limitless, the work is incredible and the
-            process is refreshingly painless.
+          <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]" style={{ lineHeight: "1em" }}>
+            Benefits
           </p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-[rgb(var(--bg-card))]">
-              <Image
-                src={images.testimonialJenny}
-                alt="Jenny London"
-                fill
-                className="object-cover"
-                sizes="56px"
-              />
-            </div>
-            <div className="text-center sm:text-left">
-              <p className="font-medium text-[rgb(var(--text))]">Jenny London</p>
-              <p className="text-sm text-[rgb(var(--text-muted))]">Founder of Kinect</p>
-            </div>
-          </div>
+        </div>
+        <div className="mx-auto max-w-2xl text-center">
+          <h2
+            className="font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
+            style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
+          >
+            Fast, quality <span className="font-serif italic">&</span> <span className="font-serif italic">limitless.</span>
+          </h2>
+          <p className="mt-4 text-[rgb(var(--text-muted))]">
+            Limitless replaces unreliable freelancers and expensive agencies for one flat monthly fee, with
+            highly-converting designs delivered so fast that it will blow your mind.
+          </p>
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-3">
-          {benefits.map((benefit, i) => (
-            <div
-              key={benefit.title}
-              className="overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--bg-card))]"
-            >
-              <div className="relative aspect-[16/10] w-full">
+        {/* Testimonial + Features */}
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr,minmax(280px,400px)] lg:items-start">
+          {/* Cards/Testimonial - Jenny London */}
+          <div
+            className="overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--bg-card))] shadow-[0_0_0_1px_rgba(255,255,255,0.06)]"
+            data-border="true"
+          >
+            <div className="grid gap-0 lg:grid-cols-2 lg:items-stretch">
+              <div className="order-2 px-6 py-8 lg:order-1 lg:flex lg:flex-col lg:justify-center lg:px-10 lg:py-12">
+                <div className="flex gap-1">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} />
+                  ))}
+                </div>
+                <p
+                  className="mt-6 text-xl font-medium text-[rgb(var(--text))] md:text-2xl"
+                  style={{ lineHeight: "140%" }}
+                >
+                  Getting design done was such a pain. I am so glad we found Limitless, the work is incredible and the
+                  process is refreshingly painless.
+                </p>
+                <div className="mt-6">
+                  <h5
+                    className="font-medium tracking-[-0.02em] text-[rgb(var(--text))]"
+                    style={{ lineHeight: "140%" }}
+                  >
+                    Jenny London
+                  </h5>
+                  <p
+                    className="text-xs font-medium tracking-[-0.02em] text-[rgb(var(--text-muted))]"
+                    style={{ lineHeight: "140%" }}
+                  >
+                    Founder of Kinect
+                  </p>
+                </div>
+              </div>
+              <div
+                className="relative order-1 min-h-[280px] w-full overflow-hidden lg:order-2 lg:min-h-[320px]"
+                style={{
+                  maskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%)",
+                  WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%)",
+                }}
+              >
                 <Image
-                  src={images.benefits[i]}
-                  alt={benefit.title}
+                  src={images.testimonialJenny}
+                  alt=""
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-right"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="p-8">
-                <h3 className="text-xl font-medium text-[rgb(var(--text))]">{benefit.title}</h3>
-                <p className="mt-3 text-[rgb(var(--text-muted))]">{benefit.description}</p>
-              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Benefits - 3 features (text only) */}
+          <div className="flex flex-col gap-10 lg:gap-8">
+            {benefits.map((benefit) => (
+              <div key={benefit.title}>
+                <h1 className="text-[28px] font-medium leading-none tracking-[-0.02em] text-[rgb(var(--text))]">
+                  {benefit.title}
+                </h1>
+                <p className="mt-3 text-[rgb(var(--text-muted))]">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

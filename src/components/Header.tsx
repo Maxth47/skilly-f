@@ -8,10 +8,9 @@ import { images } from "@/lib/images";
 const navLinks = [
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
-  { label: "Features", href: "#features" },
+  { label: "Features", href: "#benefits" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Legal", href: "/legal" },
-  { label: "Tutorials", href: "#tutorials" },
+  { label: "Pages", href: "#pricing" },
 ];
 
 export function Header() {
@@ -41,15 +40,23 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-          </nav>
-
-          <div className="flex items-center gap-3">
             <Link
-              href="#book"
-              className="hidden rounded-full bg-[rgb(var(--accent))] px-5 py-2.5 text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90 md:inline-block"
+              href="#tutorials"
+              className="rounded-full border border-white/10 bg-[rgba(13,13,13,0.5)] px-5 py-2.5 text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.1),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(255,255,255,0.08)] transition-opacity hover:opacity-90"
+            >
+              Tutorials
+            </Link>
+            <Link
+              href="https://cal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[rgb(var(--accent))] px-5 py-2.5 text-sm font-medium tracking-[-0.02em] text-white shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
             >
               Book a call
             </Link>
+          </nav>
+
+          <div className="flex items-center gap-3 md:hidden">
             <button
               type="button"
               className="rounded p-2 text-[rgb(var(--text))] md:hidden"
@@ -80,8 +87,17 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="#book"
-              className="rounded-full bg-[rgb(var(--accent))] px-5 py-2.5 text-center text-sm font-medium text-[rgb(var(--text))]"
+              href="#tutorials"
+              className="rounded-full border border-white/10 bg-[rgba(13,13,13,0.5)] px-5 py-2.5 text-center text-sm font-medium text-[rgb(var(--text))]"
+              onClick={() => setMobileOpen(false)}
+            >
+              Tutorials
+            </Link>
+            <Link
+              href="https://cal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[rgb(var(--accent))] px-5 py-2.5 text-center text-sm font-medium text-white"
               onClick={() => setMobileOpen(false)}
             >
               Book a call

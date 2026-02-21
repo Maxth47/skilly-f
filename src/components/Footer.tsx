@@ -3,11 +3,9 @@ import Link from "next/link";
 const footerLinks = [
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
-  { label: "Features", href: "#benefits" },
+  { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Legal", href: "#legal" },
-  { label: "Tutorials", href: "#tutorials" },
-  { label: "Book a call", href: "#book" },
+  { label: "Legal", href: "/legal" },
 ];
 
 export function Footer() {

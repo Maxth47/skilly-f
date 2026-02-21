@@ -49,12 +49,14 @@ export function Features() {
         </div>
 
         <div className="mt-14 text-center">
-          <Link
-            href="#book"
+          <a
+            href="https://cal.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex rounded-full bg-[rgb(var(--accent))] px-8 py-4 text-base font-medium text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
           >
             Book a 15-min call
-          </Link>
+          </a>
         </div>
       </div>
     </section>

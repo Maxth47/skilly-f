@@ -28,11 +28,13 @@ export const images = {
     `${BASE}/zp360aBeLFCROVHFQUn7Psrk4.jpg`,
   ],
   tutorialsThumb: `${BASE}/zp360aBeLFCROVHFQUn7Psrk4.jpg`,
+  // Logos extracted from reference (example.html) – logo-1.svg … logo-6.svg
   companyLogos: [
-    `${BASE}/XiJDuh3df47NsYBH2QkYL99f3A.svg`,
-    `${BASE}/JpaqrzL88okqjP21h9uM2ruGJ4A.png`,
-    `${BASE}/crpV6RKC6FWLT71lCtgSSST0.png`,
-    `${BASE}/3HdSKdJID82cm18YIfU2F5to.jpg`,
-    `${BASE}/jyNE2GeNnp9aMJcnE6tpf72YE.png`,
+    `${BASE}/logo-1.svg`,
+    `${BASE}/logo-2.svg`,
+    `${BASE}/logo-3.svg`,
+    `${BASE}/logo-4.svg`,
+    `${BASE}/logo-5.svg`,
+    `${BASE}/logo-6.svg`,
   ],
 } as const;
