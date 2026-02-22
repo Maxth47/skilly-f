@@ -53,26 +53,6 @@ export function Pricing() {
         {/* Pricing Card */}
         <div className="mx-auto mt-14 max-w-[450px]">
           <div className="relative overflow-hidden rounded-3xl border-t border-white/10 bg-[rgb(13,13,13)]">
-            {/* Sphere Video – right side overlay */}
-            <div
-              className="pointer-events-none absolute right-0 top-0 hidden h-full w-[45%] md:block"
-              style={{
-                maskImage:
-                  "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
-                WebkitMaskImage:
-                  "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
-              }}
-            >
-              <video
-                src="https://limitless-framer-template.s3.us-east-005.backblazeb2.com/Sphere.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="h-full w-full object-cover"
-              />
-            </div>
-
             {/* Content */}
             <div className="relative z-10 p-8 md:p-10">
               {/* "3 spots left" pill */}
@@ -117,9 +97,7 @@ export function Pricing() {
               {/* Buttons */}
               <div className="mt-8 flex max-w-sm flex-col gap-3 sm:flex-row">
                 <Link
-                  href="https://stripe.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   className="flex flex-1 items-center justify-center rounded-full bg-[rgb(var(--accent))] px-6 py-4 text-[21px] font-medium tracking-[-0.02em] text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
                   style={{ lineHeight: "24px" }}
                 >
@@ -190,6 +168,28 @@ export function Pricing() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Sphere Video – absolute, right side of card */}
+            <div
+              className="pointer-events-none absolute h-[720px] w-[720px]"
+              style={{
+                bottom: "-50px",
+                right: "-480px",
+                maskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,0) 10%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 90%)",
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,0) 10%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 90%)",
+              }}
+            >
+              <video
+                src="https://limitless-framer-template.s3.us-east-005.backblazeb2.com/Sphere.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>

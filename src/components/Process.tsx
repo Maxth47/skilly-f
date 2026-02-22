@@ -98,9 +98,7 @@ export function Process() {
         {/* CTA */}
         <div className="mt-14 flex justify-center">
           <a
-            href="https://cal.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
             className="inline-flex items-center justify-center rounded-full bg-[rgb(var(--accent))] px-8 py-4 text-[21px] font-medium leading-6 tracking-[-0.02em] text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition hover:opacity-90"
           >
             Book a 15-min call

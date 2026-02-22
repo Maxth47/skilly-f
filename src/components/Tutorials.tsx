@@ -20,9 +20,7 @@ export function Tutorials() {
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="https://www.hxmzaehsan.com/templates/limitless"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   className="inline-flex rounded-full bg-[rgb(var(--accent))] px-8 py-4 text-base font-medium text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
                 >
                   Buy template
