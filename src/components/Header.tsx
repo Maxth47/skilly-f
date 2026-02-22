@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { images } from "@/lib/images";
 
-const navLinks = [
+const navLinks: { label: string; href: string; hasDropdown?: boolean }[] = [
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "Features", href: "#benefits" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Pages", href: "#pricing" },
+  { label: "Pages", href: "#pricing", hasDropdown: true },
 ];
 
 export function Header() {
@@ -35,9 +35,14 @@ export function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))] transition-opacity hover:opacity-80"
+                className="flex items-center gap-1 text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))] transition-opacity hover:opacity-80"
               >
                 {link.label}
+                {link.hasDropdown && (
+                  <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                )}
               </Link>
             ))}
             <Link

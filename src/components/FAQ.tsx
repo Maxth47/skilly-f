@@ -54,12 +54,12 @@ export function FAQ() {
                 {faq.question}
                 <span className="shrink-0 pl-4">
                   <svg
-                    className={`h-5 w-5 transition-transform ${openIndex === i ? "rotate-180" : ""}`}
+                    className={`h-5 w-5 transition-transform ${openIndex === i ? "rotate-45" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14M5 12h14" />
                   </svg>
                 </span>
               </button>

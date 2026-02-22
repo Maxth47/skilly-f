@@ -6,41 +6,35 @@ const steps = [
 
 function SubscribeIcon() {
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-full w-full p-5 text-white">
-      <path d="M32 14a18 18 0 0118 18 18 18 0 01-18 18 18 18 0 01-18-18 18 18 0 0118-18" />
-      <path d="M32 50a18 18 0 01-18-18 18 18 0 0118-18 18 18 0 0118 18 18 18 0 01-18 18" />
-      <path d="M32 12v5l4 4" />
-      <path d="M32 52v-5l-4-4" />
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16 text-white">
+      {/* Circular refresh arrows */}
+      <path d="M44 24a14 14 0 01-1.5 18.5A14 14 0 0120 36" />
+      <path d="M20 40a14 14 0 011.5-18.5A14 14 0 0144 28" />
+      <polyline points="44 20 44 28 36 28" />
+      <polyline points="20 44 20 36 28 36" />
     </svg>
   );
 }
 
 function ReceiveIcon() {
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-full w-full p-5 text-white">
-      <rect x="16" y="26" width="32" height="24" rx="1" />
-      <path d="M16 26l16-14 16 14" />
-      <path d="M32 12v14" />
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16 text-white">
+      {/* Lightning bolt */}
+      <polygon points="34 8 18 36 30 36 28 56 46 28 34 28" fill="currentColor" stroke="currentColor" />
     </svg>
   );
 }
 
 function ReviseIcon() {
-  const star = (cx: number, cy: number) => (
-    <path
-      key={`${cx}-${cy}`}
-      d={`M${cx} ${cy - 3}l.9 1.8 1.9.3-1.4 1.3.3 1.9L${cx} ${cy + 1.2}l-1.4.8.3-1.9-1.4-1.3 1.9-.3.9-1.8z`}
-      fill="currentColor"
-      stroke="none"
-    />
-  );
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-full w-full p-5 text-white">
-      <path d="M28 44V26c0-2 2-4 4-4s4 2 4 4v18l-4 3-4-3z" />
-      <path d="M32 22v-2a2 2 0 014 0v2" />
-      {star(18, 52)}
-      {star(32, 52)}
-      {star(46, 52)}
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16 text-white">
+      {/* Thumbs up with sparkles */}
+      <path d="M22 30h-4a2 2 0 00-2 2v16a2 2 0 002 2h4a2 2 0 002-2V32a2 2 0 00-2-2z" />
+      <path d="M24 30l4-12a4 4 0 014-2h2a2 2 0 012 2v8h10a2 2 0 012 2.2l-2.5 16a2 2 0 01-2 1.8H24" />
+      {/* Sparkle stars */}
+      <path d="M38 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" stroke="none" />
+      <path d="M48 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" stroke="none" />
+      <path d="M42 6l.5 1 1 .5-1 .5-.5 1-.5-1-1-.5 1-.5z" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -83,7 +77,7 @@ export function Process() {
             const Icon = stepIcons[step.icon];
             return (
               <div key={step.title} className="flex flex-col items-center text-center">
-                <div className="relative mx-auto flex aspect-square w-full max-w-sm items-center justify-center overflow-hidden rounded-2xl bg-[rgb(var(--bg-card))]">
+                <div className="mb-2 flex items-center justify-center">
                   <Icon />
                 </div>
                 <div className="mt-6">

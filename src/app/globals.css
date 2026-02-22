@@ -72,3 +72,17 @@ body {
   animation: work-marquee 60s linear infinite;
   will-change: transform;
 }
+
+.animate-work-marquee-reverse {
+  animation: work-marquee-reverse 60s linear infinite;
+  will-change: transform;
+}
+
+@keyframes work-marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

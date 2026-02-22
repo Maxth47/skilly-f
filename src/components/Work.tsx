@@ -30,9 +30,11 @@ const maskTrack3 = "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 
 function WorkTrack({
   items,
   mask,
+  reverse = false,
 }: {
   items: { src: string; position: string }[];
   mask: string;
+  reverse?: boolean;
 }) {
   return (
     <div
@@ -46,7 +48,7 @@ function WorkTrack({
           WebkitMaskImage: mask,
         }}
       >
-        <ul className="flex w-max list-none flex-row items-center gap-6 p-0 animate-work-marquee">
+        <ul className={`flex w-max list-none flex-row items-center gap-6 p-0 ${reverse ? "animate-work-marquee-reverse" : "animate-work-marquee"}`}>
           {[...items, ...items].map((item, i) => (
             <li key={i} className="shrink-0" aria-hidden={i >= items.length}>
               <div
@@ -75,7 +77,7 @@ export function Work() {
     <section id="work" aria-label="Work" className="overflow-hidden py-16 md:py-24">
       <div className="flex flex-col gap-8">
         <WorkTrack items={track1} mask={maskTrack12} />
-        <WorkTrack items={track2} mask={maskTrack12} />
+        <WorkTrack items={track2} mask={maskTrack12} reverse />
         <WorkTrack items={track3} mask={maskTrack3} />
       </div>
     </section>
