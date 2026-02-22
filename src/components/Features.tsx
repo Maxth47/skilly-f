@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AnimateOnScroll } from "./AnimateOnScroll";
 
 function DesignBoardIcon() {
   return (
@@ -192,44 +193,49 @@ export function Features() {
         className="mx-auto max-w-7xl rounded-3xl border border-white/10 px-6 py-16 md:px-10 md:py-20 lg:px-16"
         data-border="true"
       >
-        <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
-          <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]">Features</p>
-        </div>
-        <h2
-          className="mx-auto max-w-2xl text-center font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
-          style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
-        >
-          Reasons you will <span className="font-serif italic" style={{ fontWeight: 400, letterSpacing: 0 }}>love </span>us.
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-center text-[rgb(var(--text-muted))]">
-          Once you try Skilly, you&apos;ll never go anywhere else for design. Seriously.
-        </p>
+        <AnimateOnScroll animation="fade-in-up" duration={0.6}>
+          <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
+            <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]">Features</p>
+          </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-in-up" duration={0.7} delay={0.1}>
+          <h2
+            className="mx-auto max-w-2xl text-center font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
+            style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
+          >
+            Reasons you will <span className="font-serif italic" style={{ fontWeight: 400, letterSpacing: 0 }}>love </span>us.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-[rgb(var(--text-muted))]">
+            Once you try Skilly, you&apos;ll never go anywhere else for design. Seriously.
+          </p>
+        </AnimateOnScroll>
 
         <div className="mt-16 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="flex flex-col items-center text-center"
-            >
-              <div className="mb-5 h-16 w-16">
-                <feature.Icon />
+          {features.map((feature, i) => (
+            <AnimateOnScroll key={feature.title} animation="fade-in-up" duration={0.6} delay={0.1 + i * 0.08}>
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-5 h-16 w-16">
+                  <feature.Icon />
+                </div>
+                <h3 className="text-[28px] font-medium tracking-[-0.02em] text-[rgb(var(--text))]" style={{ lineHeight: "1em" }}>
+                  {feature.title}
+                </h3>
+                <p className="mt-3 text-[rgb(var(--text-muted))]">{feature.description}</p>
               </div>
-              <h3 className="text-[28px] font-medium tracking-[-0.02em] text-[rgb(var(--text))]" style={{ lineHeight: "1em" }}>
-                {feature.title}
-              </h3>
-              <p className="mt-3 text-[rgb(var(--text-muted))]">{feature.description}</p>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
 
-        <div className="mt-14 text-center">
-          <a
-            href="#"
-            className="inline-flex rounded-full bg-[rgb(var(--accent))] px-8 py-4 text-[21px] font-medium tracking-[-0.02em] leading-6 text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
-          >
-            Book a 15-min call
-          </a>
-        </div>
+        <AnimateOnScroll animation="fade-in-up" duration={0.6} delay={0.5}>
+          <div className="mt-14 text-center">
+            <a
+              href="#"
+              className="inline-flex rounded-full bg-[rgb(var(--accent))] px-8 py-4 text-[21px] font-medium tracking-[-0.02em] leading-6 text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition-opacity hover:opacity-90"
+            >
+              Book a 15-min call
+            </a>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

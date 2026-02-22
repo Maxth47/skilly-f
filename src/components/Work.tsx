@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { images } from "@/lib/images";
+import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const track1 = [
   { src: images.hero, position: "center top" as const },
@@ -76,9 +77,15 @@ export function Work() {
   return (
     <section id="work" aria-label="Work" className="overflow-hidden py-16 md:py-24">
       <div className="flex flex-col gap-8">
-        <WorkTrack items={track1} mask={maskTrack12} />
-        <WorkTrack items={track2} mask={maskTrack12} reverse />
-        <WorkTrack items={track3} mask={maskTrack3} />
+        <AnimateOnScroll animation="fade-in" duration={0.8}>
+          <WorkTrack items={track1} mask={maskTrack12} />
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-in" duration={0.8} delay={0.15}>
+          <WorkTrack items={track2} mask={maskTrack12} reverse />
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-in" duration={0.8} delay={0.3}>
+          <WorkTrack items={track3} mask={maskTrack3} />
+        </AnimateOnScroll>
       </div>
     </section>
   );

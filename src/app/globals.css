@@ -115,3 +115,97 @@ body {
     transform: translateX(0);
   }
 }
+
+/* Scroll-triggered animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Base state: hidden before animation triggers */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.is-visible {
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll.is-visible.anim-fade-in-up {
+  animation-name: fade-in-up;
+}
+
+.animate-on-scroll.is-visible.anim-fade-in {
+  animation-name: fade-in;
+}
+
+.animate-on-scroll.is-visible.anim-scale-in {
+  animation-name: scale-in;
+}
+
+.animate-on-scroll.is-visible.anim-slide-in-left {
+  animation-name: slide-in-left;
+}
+
+.animate-on-scroll.is-visible.anim-slide-in-right {
+  animation-name: slide-in-right;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+  }
+  .animate-on-scroll.is-visible {
+    animation: none;
+  }
+}

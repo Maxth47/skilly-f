@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const faqs = [
   {
@@ -36,39 +37,42 @@ export function FAQ() {
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
-        <h2 className="text-center text-4xl font-medium tracking-[-0.05em] text-[rgb(var(--text))] sm:text-5xl">
-          Frequently asked questions
-        </h2>
+        <AnimateOnScroll animation="fade-in-up" duration={0.7}>
+          <h2 className="text-center text-4xl font-medium tracking-[-0.05em] text-[rgb(var(--text))] sm:text-5xl">
+            Frequently asked questions
+          </h2>
+        </AnimateOnScroll>
         <div className="mt-12 space-y-4">
           {faqs.map((faq, i) => (
-            <div
-              key={faq.question}
-              className="overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--bg-card))]"
-            >
-              <button
-                type="button"
-                className="flex w-full items-center justify-between px-6 py-5 text-left text-base font-medium text-[rgb(var(--text))] hover:bg-white/5"
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                aria-expanded={openIndex === i}
+            <AnimateOnScroll key={faq.question} animation="fade-in-up" duration={0.5} delay={0.05 + i * 0.08}>
+              <div
+                className="overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--bg-card))]"
               >
-                {faq.question}
-                <span className="shrink-0 pl-4">
-                  <svg
-                    className={`h-5 w-5 transition-transform ${openIndex === i ? "rotate-45" : ""}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14M5 12h14" />
-                  </svg>
-                </span>
-              </button>
-              {openIndex === i && (
-                <div className="border-t border-white/10 px-6 py-4 text-[rgb(var(--text-muted))]">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between px-6 py-5 text-left text-base font-medium text-[rgb(var(--text))] hover:bg-white/5"
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  aria-expanded={openIndex === i}
+                >
+                  {faq.question}
+                  <span className="shrink-0 pl-4">
+                    <svg
+                      className={`h-5 w-5 transition-transform ${openIndex === i ? "rotate-45" : ""}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14M5 12h14" />
+                    </svg>
+                  </span>
+                </button>
+                {openIndex === i && (
+                  <div className="border-t border-white/10 px-6 py-4 text-[rgb(var(--text-muted))]">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>

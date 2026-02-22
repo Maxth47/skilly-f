@@ -1,3 +1,5 @@
+import { AnimateOnScroll } from "./AnimateOnScroll";
+
 const row1 = [
   { label: "Logos", icon: "M48,64a8,8,0,0,1,8-8H72V40a8,8,0,0,1,16,0V56h16a8,8,0,0,1,0,16H88V88a8,8,0,0,1-16,0V72H56A8,8,0,0,1,48,64ZM184,192h-8v-8a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0v-8h8a8,8,0,0,0,0-16Zm56-48H224V128a8,8,0,0,0-16,0v16H192a8,8,0,0,0,0,16h16v16a8,8,0,0,0,16,0V160h16a8,8,0,0,0,0-16ZM219.31,80,80,219.31a16,16,0,0,1-22.62,0L36.68,198.63a16,16,0,0,1,0-22.63L176,36.69a16,16,0,0,1,22.63,0l20.68,20.68A16,16,0,0,1,219.31,80Zm-54.63,32L144,91.31l-96,96L68.68,208ZM208,68.69,187.31,48l-32,32L176,100.69Z" },
   { label: "Landing Pages", icon: "M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40ZM48,56H208a8,8,0,0,1,8,8v80H40V64A8,8,0,0,1,48,56ZM208,184H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z" },
@@ -58,25 +60,31 @@ export function Solution() {
   return (
     <section id="solution" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
-          <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]">Solution</p>
-        </div>
-        <h2
-          className="mx-auto max-w-2xl text-center font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
-          style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
-        >
-          All your <span className="font-serif italic" style={{ fontWeight: 400, letterSpacing: 0 }}>design </span>needs.
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-[rgb(var(--text-muted))]">
-          Running a successful business means more than just a website. That&apos;s why we cover all your design
-          needs, so you don&apos;t have to go anywhere else.
-        </p>
+        <AnimateOnScroll animation="fade-in-up" duration={0.6}>
+          <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
+            <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]">Solution</p>
+          </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-in-up" duration={0.7} delay={0.1}>
+          <h2
+            className="mx-auto max-w-2xl text-center font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
+            style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
+          >
+            All your <span className="font-serif italic" style={{ fontWeight: 400, letterSpacing: 0 }}>design </span>needs.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-[rgb(var(--text-muted))]">
+            Running a successful business means more than just a website. That&apos;s why we cover all your design
+            needs, so you don&apos;t have to go anywhere else.
+          </p>
+        </AnimateOnScroll>
       </div>
 
-      <div className="mt-14 flex flex-col gap-6">
-        <MarqueeTrack items={row1} />
-        <MarqueeTrack items={row2} reverse />
-      </div>
+      <AnimateOnScroll animation="fade-in" duration={0.8} delay={0.2}>
+        <div className="mt-14 flex flex-col gap-6">
+          <MarqueeTrack items={row1} />
+          <MarqueeTrack items={row2} reverse />
+        </div>
+      </AnimateOnScroll>
     </section>
   );
 }

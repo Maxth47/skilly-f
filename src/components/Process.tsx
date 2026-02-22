@@ -1,3 +1,5 @@
+import { AnimateOnScroll } from "./AnimateOnScroll";
+
 const steps = [
   {
     title: "Subscribe",
@@ -106,61 +108,66 @@ export function Process() {
         data-border="true"
       >
         {/* Text / Header */}
-        <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
-          <p
-            className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]"
-            style={{ lineHeight: "1em" }}
-          >
-            Process
-          </p>
-        </div>
-        <div className="mx-auto max-w-2xl text-center">
-          <h2
-            className="font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
-            style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
-          >
-            Your designs,{" "}
-            <span className="font-serif italic">effortlessly.</span>
-          </h2>
-          <p className="mt-4 text-[rgb(var(--text-muted))]">
-            Begin your design journey in three effortless steps.
-          </p>
-        </div>
+        <AnimateOnScroll animation="fade-in-up" duration={0.6}>
+          <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
+            <p
+              className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]"
+              style={{ lineHeight: "1em" }}
+            >
+              Process
+            </p>
+          </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-in-up" duration={0.7} delay={0.1}>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2
+              className="font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
+              style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
+            >
+              Your designs,{" "}
+              <span className="font-serif italic">effortlessly.</span>
+            </h2>
+            <p className="mt-4 text-[rgb(var(--text-muted))]">
+              Begin your design journey in three effortless steps.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
         {/* Boxes */}
         <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
-          {steps.map((step) => {
+          {steps.map((step, i) => {
             const Icon = stepIcons[step.icon];
             return (
-              <div
-                key={step.title}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="mb-2 flex items-center justify-center">
-                  <Icon />
+              <AnimateOnScroll key={step.title} animation="fade-in-up" duration={0.6} delay={0.15 + i * 0.12}>
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-2 flex items-center justify-center">
+                    <Icon />
+                  </div>
+                  <div className="mt-6">
+                    <h1 className="text-[28px] font-medium leading-none tracking-[-0.02em] text-[rgb(var(--text))]">
+                      {step.title}
+                    </h1>
+                    <p className="mt-3 text-center text-[rgb(var(--text-muted))]">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="mt-6">
-                  <h1 className="text-[28px] font-medium leading-none tracking-[-0.02em] text-[rgb(var(--text))]">
-                    {step.title}
-                  </h1>
-                  <p className="mt-3 text-center text-[rgb(var(--text-muted))]">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
+              </AnimateOnScroll>
             );
           })}
         </div>
 
         {/* CTA */}
-        <div className="mt-14 flex justify-center">
-          <a
-            href="#"
-            className="inline-flex items-center justify-center rounded-full bg-[rgb(var(--accent))] px-8 py-4 text-[21px] font-medium leading-6 tracking-[-0.02em] text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition hover:opacity-90"
-          >
-            Book a 15-min call
-          </a>
-        </div>
+        <AnimateOnScroll animation="fade-in-up" duration={0.6} delay={0.4}>
+          <div className="mt-14 flex justify-center">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center rounded-full bg-[rgb(var(--accent))] px-8 py-4 text-[21px] font-medium leading-6 tracking-[-0.02em] text-[rgb(var(--text))] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.05),0_2px_2px_-1px_rgba(0,0,0,0.1),0_0_0_1px_rgba(98,20,217,0.12)] transition hover:opacity-90"
+            >
+              Book a 15-min call
+            </a>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );
