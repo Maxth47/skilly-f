@@ -1,5 +1,5 @@
 // Local image paths (downloaded from reference site)
-const BASE = "/images/limitless";
+const BASE = "/images/skilly";
 
 export const images = {
   favicon: `${BASE}/favicon.png`,

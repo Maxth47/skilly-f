@@ -17,7 +17,7 @@ export function Footer() {
             href="/"
             className="text-xl font-medium tracking-tight text-[rgb(var(--text))]"
           >
-            Limitless
+            Skilly
           </Link>
           <nav className="flex flex-wrap items-center justify-center gap-6">
             {footerLinks.map((link) => (

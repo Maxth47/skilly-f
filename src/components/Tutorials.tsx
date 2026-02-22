@@ -10,12 +10,10 @@ export function Tutorials() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="text-4xl font-medium tracking-[-0.05em] text-[rgb(var(--text))] sm:text-5xl md:text-6xl">
-                <span className="font-serif">Li</span>
-                <span className="font-serif italic">mit</span>
-                <span className="font-serif opacity-50">less</span> Tutorials
+                <span className="font-serif italic">Skilly</span> Tutorials
               </h2>
               <p className="mt-6 text-lg text-[rgb(var(--text-muted))]">
-                Limitless comes with a complimentary 8-part video tutorial series to help you get set up and customise
+                Skilly comes with a complimentary 8-part video tutorial series to help you get set up and customise
                 your template.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -36,7 +34,7 @@ export function Tutorials() {
             <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-[rgb(var(--bg))]">
               <Image
                 src={images.tutorialsThumb}
-                alt="Limitless Tutorials"
+                alt="Skilly Tutorials"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

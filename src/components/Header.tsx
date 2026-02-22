@@ -30,10 +30,10 @@ export function Header() {
           }}
         >
           {/* Logo */}
-          <Link href="/" className="relative h-6 w-[90px] shrink-0">
+          <Link href="/" className="relative h-8 w-[90px] shrink-0">
             <Image
               src={images.logoPlaceholder}
-              alt="Limitless"
+              alt="Skilly"
               fill
               className="object-contain object-left"
               priority

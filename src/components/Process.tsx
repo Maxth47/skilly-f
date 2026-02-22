@@ -1,12 +1,32 @@
 const steps = [
-  { title: "Subscribe", description: "Subscribe to a plan & request as many designs as you'd like.", icon: "subscribe" },
-  { title: "Receive", description: "Receive your design as fast as two business days on average.", icon: "receive" },
-  { title: "Revise", description: "We'll revise the designs until you're 100% satisfied.", icon: "revise" },
+  {
+    title: "Subscribe",
+    description: "Subscribe to a plan & request as many designs as you'd like.",
+    icon: "subscribe",
+  },
+  {
+    title: "Receive",
+    description: "Receive your design as fast as two business days on average.",
+    icon: "receive",
+  },
+  {
+    title: "Revise",
+    description: "We'll revise the designs until you're 100% satisfied.",
+    icon: "revise",
+  },
 ];
 
 function SubscribeIcon() {
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16 text-white">
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-16 w-16 text-white"
+    >
       {/* Circular refresh arrows */}
       <path d="M44 24a14 14 0 01-1.5 18.5A14 14 0 0120 36" />
       <path d="M20 40a14 14 0 011.5-18.5A14 14 0 0144 28" />
@@ -18,28 +38,60 @@ function SubscribeIcon() {
 
 function ReceiveIcon() {
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16 text-white">
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-16 w-16 text-white"
+    >
       {/* Lightning bolt */}
-      <polygon points="34 8 18 36 30 36 28 56 46 28 34 28" fill="currentColor" stroke="currentColor" />
+      <polygon
+        points="34 8 18 36 30 36 28 56 46 28 34 28"
+        fill="currentColor"
+        stroke="currentColor"
+      />
     </svg>
   );
 }
 
 function ReviseIcon() {
   return (
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16 text-white">
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-16 w-16 text-white"
+    >
       {/* Thumbs up with sparkles */}
       <path d="M22 30h-4a2 2 0 00-2 2v16a2 2 0 002 2h4a2 2 0 002-2V32a2 2 0 00-2-2z" />
       <path d="M24 30l4-12a4 4 0 014-2h2a2 2 0 012 2v8h10a2 2 0 012 2.2l-2.5 16a2 2 0 01-2 1.8H24" />
       {/* Sparkle stars */}
-      <path d="M38 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" stroke="none" />
-      <path d="M48 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor" stroke="none" />
-      <path d="M42 6l.5 1 1 .5-1 .5-.5 1-.5-1-1-.5 1-.5z" fill="currentColor" stroke="none" />
+      <path
+        d="M38 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"
+        fill="currentColor"
+        stroke="none"
+      />
+      <path
+        d="M48 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"
+        fill="currentColor"
+        stroke="none"
+      />
+      <path
+        d="M42 6l.5 1 1 .5-1 .5-.5 1-.5-1-1-.5 1-.5z"
+        fill="currentColor"
+        stroke="none"
+      />
     </svg>
   );
 }
 
-const stepIcons: Record<string, () => JSX.Element> = {
+const stepIcons: Record<string, () => React.JSX.Element> = {
   subscribe: SubscribeIcon,
   receive: ReceiveIcon,
   revise: ReviseIcon,
@@ -55,7 +107,10 @@ export function Process() {
       >
         {/* Text / Header */}
         <div className="section-pill mx-auto mb-8 w-fit px-6 py-2">
-          <p className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]" style={{ lineHeight: "1em" }}>
+          <p
+            className="text-center text-sm font-medium tracking-[-0.02em] text-[rgb(var(--text))]"
+            style={{ lineHeight: "1em" }}
+          >
             Process
           </p>
         </div>
@@ -64,7 +119,8 @@ export function Process() {
             className="font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
             style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
           >
-            Your designs, <span className="font-serif italic">effortlessly.</span>
+            Your designs,{" "}
+            <span className="font-serif italic">effortlessly.</span>
           </h2>
           <p className="mt-4 text-[rgb(var(--text-muted))]">
             Begin your design journey in three effortless steps.
@@ -76,14 +132,15 @@ export function Process() {
           {steps.map((step) => {
             const Icon = stepIcons[step.icon];
             return (
-              <div key={step.title} className="flex flex-col items-center text-center">
+              <div
+                key={step.title}
+                className="flex flex-col items-center text-center"
+              >
                 <div className="mb-2 flex items-center justify-center">
                   <Icon />
                 </div>
                 <div className="mt-6">
-                  <h1
-                    className="text-[28px] font-medium leading-none tracking-[-0.02em] text-[rgb(var(--text))]"
-                  >
+                  <h1 className="text-[28px] font-medium leading-none tracking-[-0.02em] text-[rgb(var(--text))]">
                     {step.title}
                   </h1>
                   <p className="mt-3 text-center text-[rgb(var(--text-muted))]">

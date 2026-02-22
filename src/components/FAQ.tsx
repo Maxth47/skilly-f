@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "Why wouldn't I just hire a full-time designer?",
     answer:
-      "A full-time designer can cost $60k–$100k+ per year. With Limitless you get the same quality and speed for a flat monthly fee, with no long-term commitment. Pause or cancel anytime.",
+      "A full-time designer can cost $60k–$100k+ per year. With Skilly you get the same quality and speed for a flat monthly fee, with no long-term commitment. Pause or cancel anytime.",
   },
   {
     question: "Is there a limit to how many requests I can have?",

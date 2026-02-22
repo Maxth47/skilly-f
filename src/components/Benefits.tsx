@@ -46,10 +46,10 @@ export function Benefits() {
             className="font-medium tracking-[-0.05em] text-[rgb(var(--text))]"
             style={{ fontSize: "clamp(2.25rem, 5vw, 70px)", lineHeight: "1em" }}
           >
-            Fast, quality <span className="font-serif italic">&</span> <span className="font-serif italic">limitless.</span>
+            Fast, quality <span className="font-serif italic">&</span> <span className="font-serif italic">skilly.</span>
           </h2>
           <p className="mt-4 text-[rgb(var(--text-muted))]">
-            Limitless replaces unreliable freelancers and expensive agencies for one flat monthly fee, with
+            Skilly replaces unreliable freelancers and expensive agencies for one flat monthly fee, with
             highly-converting designs delivered so fast that it will blow your mind.
           </p>
         </div>
@@ -72,21 +72,21 @@ export function Benefits() {
                   className="mt-6 text-xl font-medium text-[rgb(var(--text))] md:text-2xl"
                   style={{ lineHeight: "140%" }}
                 >
-                  Getting design done was such a pain. I am so glad we found Limitless, the work is incredible and the
-                  process is refreshingly painless.
+                  We used to juggle three different agencies for our design work. Skilly replaced all of them and
+                  the output quality is on another level. Absolute game changer for our team.
                 </p>
                 <div className="mt-6">
                   <h5
                     className="font-medium tracking-[-0.02em] text-[rgb(var(--text))]"
                     style={{ lineHeight: "140%" }}
                   >
-                    Jenny London
+                    Sarah Mitchell
                   </h5>
                   <p
                     className="text-xs font-medium tracking-[-0.02em] text-[rgb(var(--text-muted))]"
                     style={{ lineHeight: "140%" }}
                   >
-                    Founder of Kinect
+                    Founder of Novala
                   </p>
                 </div>
               </div>

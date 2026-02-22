@@ -202,7 +202,7 @@ export function Features() {
           Reasons you will <span className="font-serif italic" style={{ fontWeight: 400, letterSpacing: 0 }}>love </span>us.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-center text-[rgb(var(--text-muted))]">
-          Once you try Limitless, you&apos;ll never go anywhere else for design. Seriously.
+          Once you try Skilly, you&apos;ll never go anywhere else for design. Seriously.
         </p>
 
         <div className="mt-16 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">

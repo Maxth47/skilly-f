@@ -2,13 +2,13 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Limitless - The truly Limitless design subscription",
+  title: "Skilly - The truly Skilly design subscription",
   description:
     "Say goodbye to expensive freelancers, and hello to limitless, lightning fast design.",
   icons: {
-    icon: "/images/limitless/favicon.png",
-    shortcut: "/images/limitless/favicon.png",
-    apple: "/images/limitless/favicon.png",
+    icon: "/images/skilly/favicon.png",
+    shortcut: "/images/skilly/favicon.png",
+    apple: "/images/skilly/favicon.png",
   },
 };
 

@@ -56,22 +56,21 @@ export function TestimonialHero() {
                 className="mt-6 text-xl font-medium text-[rgb(var(--text))] md:text-2xl"
                 style={{ lineHeight: "140%" }}
               >
-                Hamza delivers beautiful, highly-converting designs in record time. It&apos;s hard to find a designer
-                you can trust with your brand but Hamza and Limitless have earned it. Look forward to working in the
-                future.
+                The quality and speed of delivery completely exceeded our expectations. Skilly transformed our brand
+                identity and the results speak for themselves. Couldn&apos;t recommend them enough.
               </p>
               <div className="mt-6">
                 <h5
                   className="font-medium tracking-[-0.02em] text-[rgb(var(--text))]"
                   style={{ lineHeight: "140%" }}
                 >
-                  Tony Saoprano
+                  Marcus Chen
                 </h5>
                 <p
                   className="text-xs font-medium tracking-[-0.02em] text-[rgb(var(--text-muted))]"
                   style={{ lineHeight: "140%" }}
                 >
-                  CEO of Tryal
+                  CTO of Vantage
                 </p>
               </div>
             </div>

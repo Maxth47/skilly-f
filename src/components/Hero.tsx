@@ -15,9 +15,8 @@ export function Hero() {
 
           <h1 className="max-w-5xl text-5xl font-medium leading-[1.1] tracking-[-0.05em] text-[rgb(var(--text))] sm:text-7xl md:text-8xl lg:text-[110px]">
             The truly{" "}
-            <span className="font-serif">
-              L<span className="italic">i</span>mit
-              <span className="opacity-50">less</span>
+            <span className="font-serif italic">
+              Skilly
             </span>{" "}
             design subscription.
           </h1>
