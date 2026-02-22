@@ -55,14 +55,14 @@ export function Benefits() {
         </div>
 
         {/* Testimonial + Features */}
-        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr,minmax(280px,400px)] lg:items-start">
+        <div className="mt-16 flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
           {/* Cards/Testimonial - Jenny London */}
           <div
-            className="overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--bg-card))] shadow-[0_0_0_1px_rgba(255,255,255,0.06)]"
+            className="flex-1 overflow-hidden rounded-2xl border border-white/10 bg-[rgb(var(--bg-card))]"
             data-border="true"
           >
-            <div className="grid gap-0 lg:grid-cols-2 lg:items-stretch">
-              <div className="order-2 px-6 py-8 lg:order-1 lg:flex lg:flex-col lg:justify-center lg:px-10 lg:py-12">
+            <div className="flex flex-col md:flex-row md:items-stretch">
+              <div className="flex flex-col justify-center px-6 py-8 md:flex-1 md:px-10 md:py-12">
                 <div className="flex gap-1">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star key={i} />
@@ -91,7 +91,7 @@ export function Benefits() {
                 </div>
               </div>
               <div
-                className="relative order-1 min-h-[280px] w-full overflow-hidden lg:order-2 lg:min-h-[320px]"
+                className="relative min-h-[280px] w-full md:w-[45%] md:min-h-[320px]"
                 style={{
                   maskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%)",
                   WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%)",
@@ -101,15 +101,15 @@ export function Benefits() {
                   src={images.testimonialJenny}
                   alt=""
                   fill
-                  className="object-cover object-right"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                 />
               </div>
             </div>
           </div>
 
           {/* Benefits - 3 features (text only) */}
-          <div className="flex flex-col gap-10 lg:gap-8">
+          <div className="flex flex-col gap-10 lg:w-[320px] lg:shrink-0 lg:gap-8">
             {benefits.map((benefit) => (
               <div key={benefit.title}>
                 <h1 className="text-[28px] font-medium leading-none tracking-[-0.02em] text-[rgb(var(--text))]">
