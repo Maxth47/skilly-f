@@ -53,14 +53,14 @@ export function Pricing() {
         {/* Pricing Card */}
         <div className="mx-auto mt-14 max-w-[450px]">
           <div className="relative overflow-hidden rounded-3xl border-t border-white/10 bg-[rgb(13,13,13)]">
-            {/* Sphere Video – bottom-right decorative overlay */}
+            {/* Sphere Video – right side overlay */}
             <div
-              className="pointer-events-none absolute bottom-0 right-0 hidden h-[65%] w-[50%] md:block"
+              className="pointer-events-none absolute right-0 top-0 hidden h-full w-[45%] md:block"
               style={{
                 maskImage:
-                  "linear-gradient(to bottom, rgba(0,0,0,0) 10%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 90%)",
+                  "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, rgba(0,0,0,0) 10%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 90%)",
+                  "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
               }}
             >
               <video
