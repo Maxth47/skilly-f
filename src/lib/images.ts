@@ -7,7 +7,7 @@ export const images = {
   // Featured on / Trusted by logos (use as company logos)
   logoPlaceholder: `${BASE}/XiJDuh3df47NsYBH2QkYL99f3A.svg`,
   testimonialTony: `${BASE}/gqUP80LGUOINQjhhLeYEzXe6G44.jpg`,
-  testimonialTonyCard: `${BASE}/HHIrh9QRgM5it7trAH7fcZcn2NI.jpg`,
+  testimonialTonyCard: `${BASE}/HHIrh9QRgM5it7trAH7fcZcn2Nx.png`,
   testimonialJenny: `${BASE}/v6Mszk3RrZhyQSqyf901fkxHDRg.jpg`,
   process: [
     `${BASE}/IHfks8oJ30AQUhgh03QgUwHIA.png`,
